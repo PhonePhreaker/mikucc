@@ -1,0 +1,43 @@
+
+.code {
+	padding-top :20px;
+	padding-left :10px;
+	padding-right :10px;
+	padding-bottom : 20px;
+	width: max-content;
+	border: 5px;
+	border-radius :10px;
+	background-color :#545454;	 
+	color :white;
+	border-color :#a9a9a9;
+	max-width: 60%;
+	
+}
+
+.text-box {
+	
+	width :50%;
+	left :25%;
+	right: 25%;
+	top :10%;
+	border :2px;
+	border-style :ridge;
+	position :absolute;
+}
+
+#banner {
+	position :fixed;
+	top :10%;
+	left :2%;
+	min-height :10%
+	min-width :30%;
+	max-height :10%;
+	max-width :30%;
+}
+
+#banner img {
+	min-height :5%;
+	min-width :10%;
+	max-height :5%;
+	max-width :10%;
+}

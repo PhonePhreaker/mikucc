@@ -1,0 +1,69 @@
+<doctype !html>
+<head>
+
+	<meta charset = "UTF-8" />
+	<link rel="stylesheet" href="res/css/style.css">	
+</head>
+<body>
+	<img src="res/MikuLogo.png" id="banner">
+	<div class="text-box">
+		<h2>Begginer Programmers Guide</h2>
+		The following document is for advanced programmers if your starting out 
+		folloe the following link <a href="res/begginer.html">guide</a>
+		
+		<h2>What is the MikuC or MikuChan Programming Language</h2>
+	
+	The MikuChan programming language is a Object Oriented Programming Language with
+	pre processore macro and runtime macro support as well as types built by tags and properties ,out of the box. And a light VM for 
+	optional garbage collection or just memory leaks prevention fuzzing framework and future web enbedding support.</br></br>
+	
+	<h2>Types</h2>
+		
+	The following primitive types exist;
+	
+		<ul>	
+			<li><p class="high">tag</p>This is a generic struct which has the following values
+					<ul>
+						<li>byte_quant :u32,</li>
+						<li>properties :@Tup</li></ul>NOTE: @Tup is a standard runtime macro representing a Tuple
+			<li><p class="high">u8</p>unsigned 8bit variable, built by byte_quant = 1; properties@app(@init(0))</li> NOTE this will make so properties tupple has its @app "append" property called and passed the @init propertrit whichw will set all u8 primitives to be initially 0  
+			<li><p class="high">u16</p>unsigned 16 bit variable, built by byte_quant = 2; properties@stdprim </li>NOTE  @stdprim has @app(@init(0)) and all other properties append requests that an std primitive has 
+			<l1><p class="high">u32</p></li>
+			<li><p class="high">u64</p></li>
+			
+			<li><p class="high">f32</p></li> signed floating point number 	
+			<li><p class="high">f64</p></li>
+			
+			<li>u64</l1>
+
+		</ul>
+
+	<h2>What is a Pre Processor Macro?</h2>
+	Like in C a pre processor macro is identified by the pound sign </br>
+	<p class="code">1. #DOCIFY</p>
+	
+	Unlike C though instead of only building code at the preprocessing stages it also MikuC 
+	and C Scripts to work with compiler 
+
+	There exists also runtime macros which run along side the main thread 
+	identified by the at sign 
+	<p class="code">1. @load("UWU")</p>
+	this runtime macro is similar to the import keyword in java were in java it makes the class loader 
+	load a class herer the @load runtime macro loads a lib.</br></br> 
+	
+	The $UWU path variable refers to the root path were the headerds are stored for the MikuChan Programming Language
+	A .mc file contains MikuC source code while a .mch is mostly used for the  #include macro which is mostly
+	used for the macro creations to use libraries the runtime macro @load("libname") is used.</br></br> 
+	 	
+	<div class="code">
+		1.#Example { </br>
+		2.</br>
+		3.	#include<$UWU/macro.mch> </br>
+		4.} </br>
+	</div> 
+
+			
+	</div>
+
+	<script src="res/js/style.js"></script>	
+</body>
