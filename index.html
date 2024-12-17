@@ -7,20 +7,56 @@
 <body>
 	<img src="res/MikuLogo.png" id="banner">
 	<div class="text-box">
+
+		<h2>NEWS</h2>
+		In version 1.00 support for a Quantum Abstract
+		Machine vm will be added as well as suport for the Quil 
+		instruction set. The Quantum Abstract Machine VM 
+		will be based on the following <a href="https://arxiv.org/pdf/1608.03355">doc<a/>
+</br>
+	
+		the 0.01 release will add support only for linux systems
+		elf executables and the x86 instruction set , 16 bit , 32bit and 64 bit  		
+	
 		<h2>Begginer Programmers Guide</h2>
 		The following document is for advanced programmers if your starting out 
 		folloe the following link <a href="res/begginer.html">guide</a>
 		
+
 		<h2>What is the MikuC or MikuChan Programming Language</h2>
 	
 	The MikuChan programming language is a Object Oriented Programming Language with
 	pre processore macro and runtime macro support as well as types built by tags and properties ,out of the box. And a light VM for 
 	optional garbage collection or just memory leaks prevention fuzzing framework and future web enbedding support.</br></br>
+
+	<h2>Hello World</h2>
+	<div class="code" &nbsp>
+		/*</br>
+		*	Hello World! in MikuC</br>
+		*</br>
+		*/</br>
+		 @load("OS")</br>
+		 @load("UWU") //standard library is called UWU</br>
+		 @load("WEB")</br>
+		</br>
+		OS::Ret main(arg :UWU::Args) {</br>
+					      </br>
+		&nbsp;&nbsp;UWU::console::println("Hello World");</br></br>
+		&nbsp;&nbsp;let server = WEB::Apache::build();</br></br>
+		&nbsp;&nbsp;//build a web apache server and get it running</br></br>
+		&nbsp;&nbsp;server.add.style("default");</br></br>
+		&nbsp;&nbsp;server.println("Hello World");</br></br>
+		&nbsp;&nbsp;//same as server.add.html("Hello World");</br></br>
+					      </br>
+					      </br>
+			return OS::Ret::Ok;       </br>
+		} 			      </br>
+	</div>			
 	
 	<h2>Types</h2>
 		
-	The following primitive types exist;
-	
+	The following primitive types exist:</br>
+	Note that they are found in the following path "$UWU/types.mch", $UWU represent the standard installation path on your sys</br>	
 		<ul>	
 			<li><p class="high">tag</p>This is a generic struct which has the following values
 					<ul>
@@ -31,8 +67,10 @@
 			<l1><p class="high">u32</p></li>
 			<li><p class="high">u64</p></li>
 			
-			<li><p class="high">f32</p></li> signed floating point number 	
-			<li><p class="high">f64</p></li>
+			<li><p class="high">f32</p></li> signed floating point 32bit number 	
+			<li><p class="high">f64</p></li> signed floating point 64bit number
+			<li><p class="high">str</p></li> represents a slice of string ASCII always endend by a \0 character
+			<li><p class="high">str64</p></li> represent a slice of string Unicode
 			
 			<li>u64</l1>
 
@@ -59,11 +97,20 @@
 		1.#Example { </br>
 		2.</br>
 		3.	#include<$UWU/macro.mch> </br>
-		4.} </br>
-	</div> 
-
+		4.
+		5.} </br>
+	</div> </br>
+	
+	<h2>MikuVM and the MCMP</h2>
+	The MikuC Memleak Prevention framework or MCMP is wrapper for the basic
+	memory operations like pointer arithimethics, malloc and free. Registering what happens and logging it.</br></br>
+	
+	
+	It will be also used as a debugger and include a fuzzing framework.</br> 
+	
 			
-	</div>
+	
 
+	</div>
 	<script src="res/js/style.js"></script>	
 </body>
