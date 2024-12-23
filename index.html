@@ -7,7 +7,11 @@
 <body>
 	<img src="res/MikuLogo.png" id="banner">
 	<div class="text-box">
-
+		
+		<h1>Looking for Volunteers</h1>
+		As of now front end web devs are needed for keeping this page updated, cause as you can see
+		with inspect element front end aint my forte. </br>
+		And designers to draw cute Hatsune Mikus and a new logo >:3</br>
 		<h2>NEWS</h2>
 		In version 1.00 support for a Quantum Abstract
 		Machine vm will be added as well as suport for the Quil 
@@ -15,9 +19,19 @@
 		will be based on the following <a href="https://arxiv.org/pdf/1608.03355">doc<a/>
 </br>
 	
-		the 0.01 release will add support only for linux systems
+		the 0.01 release will add support only for POSIX based systems
 		elf executables and the x86 instruction set , 16 bit , 32bit and 64 bit  		
-	
+		</br>
+		As of now the author is focusing on gathering a team of programmers to form the basis for our main developmen team
+		which will be tasked with developing the language design, compiler design(implementing llvm as well as designing our own backend)
+		</br>
+		NOTE THE GIT REPOSITORY IS MAINLY TO DUMP SCRAP CODES AND CAN HEAVILLY CHANGE FROM ONE MOMENT TO THE OTHER 
+		compiler designs and high level diagrams will be posted to the github.io pages as soon as the author gathers a team and 
+		finalizes the compiler design. 
+		</br>
+		The actual code being written by the sole author is as of now towards implementing the MikuVM and MCMP(MikuC Memory Protection layer)
+		which is a framework designed not to be used only by the MikuC language and VM but as well as any C/C++ program 
+		</br>  
 		<h2>Begginer Programmers Guide</h2>
 		The following document is for advanced programmers if your starting out 
 		folloe the following link <a href="res/begginer.html">guide</a>
@@ -61,7 +75,8 @@
 			<li><p class="high">tag</p>This is a generic struct which has the following values
 					<ul>
 						<li>byte_quant :u32,</li>
-						<li>properties :@Tup</li></ul>NOTE: @Tup is a standard runtime macro representing a Tuple
+						<li>properties :#Box</li></ul>NOTE: @Tup is a standard preprocessing macro which will size auto size to fit the quant of 
+						elements inside at compile time 
 			<li><p class="high">u8</p>unsigned 8bit variable, built by byte_quant = 1; properties@app(@init(0))</li> NOTE this will make so properties tupple has its @app "append" property called and passed the @init propertrit whichw will set all u8 primitives to be initially 0  
 			<li><p class="high">u16</p>unsigned 16 bit variable, built by byte_quant = 2; properties@stdprim </li>NOTE  @stdprim has @app(@init(0)) and all other properties append requests that an std primitive has 
 			<l1><p class="high">u32</p></li>
